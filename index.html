@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-sm-7">
+            <!--Tabla con convalidaciones-->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th colspan="2">Estudios a convalidar</th>
+                        <th colspan="2">Estudios aportados</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>Ciclo</th>
+                        <th>Módulo</th>
+                        <th>Ciclo</th>
+                        <th>Módulo</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-tabla-convalidaciones">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-sm-1">
+            <!--Columna que crea un espacio-->
+        </div>
+
+        <div class="col-sm-4">
+            <!-- Formulario para añadir y modificar convalidaciones-->
+            <form id="form-convalidaciones">
+                <div class="form-group">
+                    <label for="modulo-a-convalidar">Módulo a convalidar</label>
+                    <input type="text" class="form-control" name="moduloAConvalidar" value="" id="modulo-a-convalidar">
+                </div>
+
+                <div class="form-group">
+                    <label for="ciclo-a-convalidar">Ciclo a convalidar</label>
+                    <input type="text" class="form-control" name="cicloAConvalidar" value="" id="ciclo-a-convalidar">
+                </div>
+
+                <div class="form-group">
+                    <label for="modulo-aportado">Módulo aportado</label>
+                    <input type="text" class="form-control" name="moduloAportado" value="" id="modulo-aportado">
+                </div>
+
+                <div class="form-group">
+                    <label for="ciclo-aportado">Ciclo aportado</label>
+                    <input type="text" class="form-control" name="cicloAportado" value="" id="ciclo-aportado">
+                </div>
+
+                <input type="submit" class="form-control" value="Crear convalidación" id="btn-enviar-convalidacion">
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAoSjbzTKDkjiEXJCFbfHtn40g-397iibU",
+            authDomain: "crud-firebase-b3641.firebaseapp.com",
+            databaseURL: "https://crud-firebase-b3641.firebaseio.com",
+            projectId: "crud-firebase-b3641",
+            storageBucket: "crud-firebase-b3641.appspot.com",
+            messagingSenderId: "811677553822"
+        };
+
+        firebase.initializeApp(config);
+    </script>
+
+    <script SRC="app.js"></script>
+    i
+</body>
+
+</html>
